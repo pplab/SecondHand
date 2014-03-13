@@ -1,0 +1,52 @@
+---
+layout: default
+title: " Re: 出ipad3 16g wifi"
+---
+
+<div class="post_text">
+发信人:&nbsp;czs&nbsp;(盛哥),&nbsp;信区:&nbsp;SecondHand
+<br/>标&nbsp;&nbsp;题:&nbsp;Re:&nbsp;出ipad3&nbsp;16g&nbsp;wifi
+<br/>发信站:&nbsp;瀚海星云&nbsp;(2014年03月14日07:28:45&nbsp;星期五),&nbsp;站内信件&nbsp;WWWPOST
+<br/>
+<br/>法二:
+<br/>再分享一点win8电源管理的方法。。。
+<br/>ydzr2542618(9级)&nbsp;楼主
+<br/>先感谢wenfushan分享的帖子：<a target="_blank" href="http://tieba.baidu.com/p/28394">http://tieba.baidu.com/p/28394</a> 
+<br/>个人感觉这里介绍的方法比较复杂，而且导入ultrapowersaver.pow的时候覆盖了系统自带的节能模式计划。
+<br/>（有时候超级省电模式的性能显得太低了，这个时候用系统自带的省电模式还是比较均衡的。）
+<br/>分享下我用的方案：
+<br/>1.&nbsp;从<a target="_blank" href="http://pan.baidu.com/s/1jG9fzW下载ultrapowersaver.">http://pan.baidu.com/s/1jG9fzW下载ultrapowersaver.</a> 
+<br/>pow，放到C:\
+<br/>2.&nbsp;从菜单打开管理员状态的cmd
+<br/>
+<br/>3.&nbsp;执行powercfg&nbsp;/IMPORT&nbsp;C:\ultrapowersaver.pow&nbsp;
+<br/>记录下自动生成的一串代码（可以长按命令提示符窗口标题栏，有选择、复制的选项）
+<br/>4.&nbsp;新建一个批处理文件“选择电源模式.cmd”
+<br/>代码如下：
+<br/>@echo&nbsp;off
+<br/>echo&nbsp;1.&nbsp;切换成高性能模式
+<br/>echo&nbsp;2.&nbsp;切换成节能模式
+<br/>echo&nbsp;3.&nbsp;切换成超级节能模式(需导入ultrapowersaver.pow)
+<br/>set&nbsp;/p&nbsp;mode=&quot;选择1/2/3:&quot;
+<br/>if&nbsp;%mode%==1&nbsp;goto&nbsp;part1
+<br/>if&nbsp;%mode%==2&nbsp;goto&nbsp;part2
+<br/>if&nbsp;%mode%==3&nbsp;goto&nbsp;part3
+<br/>goto&nbsp;end
+<br/>:part1
+<br/>powercfg&nbsp;-setactive&nbsp;8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+<br/>goto&nbsp;end
+<br/>:part2
+<br/>powercfg&nbsp;-setactive&nbsp;a1841308-3541-4fab-bc81-f71556f20b4a
+<br/>goto&nbsp;100  6016    0  6016    0     0   431k      0 --:--:-- --:--:-- --:--:--  534k
+end
+<br/>:part3
+<br/>powercfg&nbsp;-setactive&nbsp;【这里改成刚刚记录下来的那串代码】
+<br/>:end
+<br/>（注，也可以建立三个批处理每个执行一种操作，我是嫌桌面上放三个批处理太占地方了）
+<br/>5.&nbsp;以后就可以用批处理切换了，输入相应选项就行
+<br/>
+<br/>--
+<br/><span class="n032 n40">※&nbsp;来源:・瀚海星云&nbsp;Android客户端・</span><span class="n030 n40"></span><span class="n037 n40">[&nbsp;</span><a target="_blank" href="http://goo.gl/s7MjB">http://goo.gl/s7MjB</a> ]
+<br/>
+<br/>--
+<br/><span class="n030 n40"></span><span class="n137 n40">※&nbsp;来源:・瀚海星云&nbsp;bbs.ustc.edu.cn・[FROM:&nbsp;117.136.20.187]</span><span class="n030 n40"></span><br/> 
