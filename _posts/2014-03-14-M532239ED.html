@@ -1,0 +1,28 @@
+---
+layout: default
+title: " Re: 出ipad3 16g wifi"
+---
+
+<div class="post_text">
+发信人:&nbsp;czs&nbsp;(盛哥),&nbsp;信区:&nbsp;SecondHand
+<br/>标&nbsp;&nbsp;题:&nbsp;Re:&nbsp;出ipad3&nbsp;16g&nbsp;wifi
+<br/>发信站:&nbsp;瀚海星云&nbsp;(2014年03月14日07:06:21&nbsp;星期五),&nbsp;站内信件&nbsp;WWWPOST
+<br/>
+<br/>原理是限制Cpu只有两个核心运行，其余处在c0状态（比起msconfig的优点是可以不用重启开启停止核心，只需更换电源计划即可），限制处理器最大运行状态在25%，禁止睿频，处理器性能提升策略为Single（一次性提升最小，原为IdealAggresive或Rocket，表示讲不清楚），增加处理器性能提升检测时间间隔。
+<br/>1.
+<br/>2.导入我提供的电源计划，cd到该文件的位置，管理员运行powercfg&nbsp;/IMPORT&nbsp;ultrapowersaver.pow&nbsp;a1841308-3541-4fab-bc81-f71556f20b4a
+<br/>3.运行powercfg&nbsp;-setactive&nbsp;a1841308-3541-4fab-bc81-f71556f20b4a
+<br/>4.这样的性能足够浏览网页、Word、放幻灯片、PDF，Metro程序运行没什么压力，但桌面程序略卡顿，自己体验了就知道。不过相当节电，看网页终于能达到官方的10h水平了（dv8p电池18Wh，泪流满面），看电子书基本上就只是屏幕在耗电了！
+<br/>关于阿童木如何开启除了平衡之外的其他模式（适用于所有windows7及以上版本的系统，不分cpu）：
+<br/>节能：powercfg&nbsp;-setactive&nbsp;a1841308-3541-4fab-bc81-f71556f20b4a
+<br/>高性能：powercfg&nbsp;-setactive&nbsp;8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+<br/>1-29&nbsp;20:00评论
+<br/>wenfushan(7级)&nbsp;楼主
+<br/><a target="_blank" href="http://pan.baidu.com/s/1j">http://pan.baidu.com/s/1j</a> 
+<br/>
+<br/>--
+<br/><span class="n032 n40">※&nbsp;来源:・瀚海星云&nbsp;Android客户端・</span><span class="n030 n40"></span><span class="n037 n40">[&nbsp;</span><a target="_blank" href="http://goo.gl/s7MjB">http://goo.gl/s7MjB</a> ]
+<br/>
+<br/>--
+<br/><span class="n030 n40"></span><span class="n1100  5482    0  5482    0     0   398k      0 --:--:-- --:--:-- --:--:--  486k
+34 n40">※&nbsp;来源:・瀚海星云&nbsp;bbs.ustc.edu.cn・[FROM:&nbsp;117.136.20.187]</span><span class="n030 n40"></span><br/> 
